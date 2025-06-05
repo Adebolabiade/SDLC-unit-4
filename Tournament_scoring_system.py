@@ -20,8 +20,8 @@ scores.update({ind: 0 for ind in individuals})
 # Event results
 event_results = {
     "Maths Quiz": ["Alice", "Frank", "kara", "paula", "Bob"],
-    "Obstacle Race": ["Bob", "Grace", "leo", "Quinn", "Jack"],
-    "Debate": ["Charlie", "Holly", "Mason", "Alice", "Riley"],
+    "Obstacle Race": ["Bob", "Grace", "Leo", "Quinn", "Jack"],
+    "Debate": ["Charlie", "Holly", "Mason", "Kara", "Riley"],
     "Chess": ["David", "Mia", "Ian", "Nina", "Sophie"],
     "Code Sprint": ["Ella", "Jack", "Oscar", "Tom", "Mia"]
 }
