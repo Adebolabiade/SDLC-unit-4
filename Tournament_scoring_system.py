@@ -20,8 +20,8 @@ scores.update({ind: 0 for ind in individuals})
 # Event results
 event_results = {
     "Maths Quiz": ["Alice", "Frank", "kara", "paula", "Bob"],
-    "Obstacle Race": ["Bob", "Grace", "Leo", "Quinn", "Jack"],
-    "Debate": ["Charlie", "Holly", "Mason", "Kara", "Riley"],
+    "Obstacle Race": ["Bob", "Grace", "leo", "Quinn", "Jack"],
+    "Debate": ["Charlie", "Holly", "Mason", "Alice", "Riley"],
     "Chess": ["David", "Mia", "Ian", "Nina", "Sophie"],
     "Code Sprint": ["Ella", "Jack", "Oscar", "Tom", "Mia"]
 }
@@ -79,6 +79,17 @@ def display_team_event_summary(team_name, event_name):
     top_individuals = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:10]
     for name, score in top_individuals:
         output.append(f"{name}: {score} points")
+
+    # Event leaderboard
+    output.append(f"\n--- {event_name} Leaderboard ---")
+    leaderboard = []
+    for i, name in enumerate(event_participants):
+        if name in scores and i < len(POINTS):
+            leaderboard.append((name, POINTS[i]))
+    leaderboard.sort(key=lambda x: x[1], reverse=True)
+
+    for name, pts in leaderboard:
+        output.append(f"{name}: {pts} points")
 
     return "\n".join(output)
 
